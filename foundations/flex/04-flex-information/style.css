@@ -1,5 +1,11 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+
+  /* added */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
 }
 
 img {
@@ -10,6 +16,28 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+}
+
+/* added */ 
+.plants {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* added */
+.plants > * {
+  display: flex;
+  flex: 0 1 200px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* added */
+.text {
+  text-align: center;
 }
 
 /* do not edit this footer */
@@ -24,3 +52,26 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/* I over complicated the solution, this is how it should have been implemented 
+
+body {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.info {
+  max-width: 200px;
+}
+
+where .container is the class of the div containing all the infos and 
+.info is the class of the divs containing plants imgs + text */ 
